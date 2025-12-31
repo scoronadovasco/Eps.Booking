@@ -1,0 +1,11 @@
+namespace Eps.Booking.Domain.Entities;
+
+public class AvailabilityEntity
+{
+    public Guid Id { get; set; }
+    public Guid DoctorId { get; set; }
+    public DoctorEntity Doctor { get; set; } = default!;
+    public DayOfWeek DayOfWeek { get; set; }
+    public TimeSpan StartTime { get; set; }
+    public TimeSpan EndTime { get; set; }
+}
