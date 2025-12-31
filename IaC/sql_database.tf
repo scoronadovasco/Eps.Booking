@@ -9,5 +9,9 @@ resource "azurerm_mssql_server" "eps-booking-database" {
 
 resource "azurerm_mssql_database" "db" {
   name      = "eps_booking_db"
-  server_id = azurerm_mssql_server.server.id
+  server_id = azurerm_mssql_server.eps-booking-database.id
+  sku_name = "Basic"
+  max_size_gb = 4
+  geo_backup_enabled = false
+  
 }
