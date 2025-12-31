@@ -11,5 +11,13 @@ public class AppointmentConfiguration
         entityBuilder.Property(x => x.ClinicId).IsRequired();
         entityBuilder.Property(x => x.DoctorId).IsRequired();
         entityBuilder.Property(x => x.PatientId).IsRequired();
+
+        entityBuilder.HasOne(x => x.Patient).
+        WithMany(x => x.Appointments).
+        HasForeignKey(x => x.PatientId);
+
+        entityBuilder.HasOne(x => x.Doctor).
+        WithMany(x => x.Appointments).
+        HasForeignKey(x => x.DoctorId);
     }
 }

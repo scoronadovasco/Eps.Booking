@@ -10,5 +10,8 @@ public class PatientConfiguration
         entityBuilder.HasKey(x => x.Id);
         entityBuilder.Property(x => x.DocumentNumber).IsRequired();
         entityBuilder.Property(x => x.UserId).IsRequired();
+
+        entityBuilder.HasMany(x=>x.Appointments)
+        .WithOne(x => x.Patient).HasForeignKey(x => x.PatientId);
     }
 }

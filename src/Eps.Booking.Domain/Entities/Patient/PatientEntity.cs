@@ -6,9 +6,10 @@ public class PatientEntity
 
     public Guid UserId { get; set; }
     public UserEntity? User { get; set; }
-
     public required string DocumentNumber { get; set; }
+    public DateTime BirthDate { get; set; }
 
-    public DateTime BirthDate {get; set;}
-    
+    public ICollection<AppointmentEntity> Appointments { get; set; }
+       = new List<AppointmentEntity>();
+
 }
