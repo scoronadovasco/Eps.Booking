@@ -5,7 +5,7 @@ namespace Eps.Booking.Domain.Entities;
 
 public class AppointmentEntity
 {
-     public Guid Id { get; set; }
+    public Guid Id { get; set; }
     public Guid DoctorId { get; set; }
     public DoctorEntity Doctor { get; set; } = default!;
     public Guid PatientId { get; set; }

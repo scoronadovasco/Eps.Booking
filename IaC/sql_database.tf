@@ -7,11 +7,17 @@ resource "azurerm_mssql_server" "eps-booking-database" {
   version                      = "12.0"
 }
 
+resource "azurerm_mssql_firewall_rule" "example" {
+  name             = "myip"
+  server_id        = azurerm_mssql_server.eps-booking-database.id
+  start_ip_address = "181.51.32.102"
+  end_ip_address   = "181.51.32.102"
+}
+
 resource "azurerm_mssql_database" "db" {
   name      = "eps_booking_db"
   server_id = azurerm_mssql_server.eps-booking-database.id
   sku_name = "Basic"
-  max_size_gb = 4
   geo_backup_enabled = false
   
 }
