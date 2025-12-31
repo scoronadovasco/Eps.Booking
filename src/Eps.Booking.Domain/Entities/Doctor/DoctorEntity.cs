@@ -4,11 +4,11 @@ public class DoctorEntity
 {
     public Guid Id { get; set; }
     
-    public required string UserId { get; set; }
+    public required Guid UserId { get; set; }
 
     public UserEntity? User { get; set; }
 
-    public string? SpecialityId { get; set; }
+    public Guid? SpecialityId { get; set; }
 
     public SpecialityEntity? Speciality { get; set; }
 

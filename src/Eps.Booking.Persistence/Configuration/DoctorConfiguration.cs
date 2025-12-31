@@ -14,5 +14,7 @@ public class DoctorConfiguration
         entityBuilder.HasMany(x => x.Appointments).
         WithOne(x => x.Doctor).
         HasForeignKey(x => x.DoctorId);
+
+        
     }
 }

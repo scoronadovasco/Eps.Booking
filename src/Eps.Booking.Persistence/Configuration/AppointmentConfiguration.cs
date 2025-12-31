@@ -1,4 +1,5 @@
 using Eps.Booking.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Eps.Booking.Persistence.Configuration;
@@ -14,10 +15,10 @@ public class AppointmentConfiguration
 
         entityBuilder.HasOne(x => x.Patient).
         WithMany(x => x.Appointments).
-        HasForeignKey(x => x.PatientId);
+        HasForeignKey(x => x.PatientId).OnDelete(DeleteBehavior.Restrict);;
 
         entityBuilder.HasOne(x => x.Doctor).
         WithMany(x => x.Appointments).
-        HasForeignKey(x => x.DoctorId);
+        HasForeignKey(x => x.DoctorId).OnDelete(DeleteBehavior.Restrict);
     }
 }
