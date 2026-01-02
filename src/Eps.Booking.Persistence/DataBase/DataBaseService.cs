@@ -1,3 +1,4 @@
+using Eps.Booking.Application.Interfaces;
 using Eps.Booking.Domain.Entities;
 using Eps.Booking.Persistence.Configuration;
 using Microsoft.EntityFrameworkCore;
@@ -5,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Eps.Booking.Persistence.DataBase;
 
 
-public class DataBaseService : DbContext
+public class DataBaseService : DbContext, IDataBaseService
 {
     public DataBaseService(DbContextOptions options) : base(options)
     {
