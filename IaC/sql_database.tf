@@ -1,5 +1,5 @@
 resource "azurerm_mssql_server" "eps-booking-database" {
-  name                         = "eps-booking-database-1205"
+  name                         = "eps-booking-database-0512"
   resource_group_name          = azurerm_resource_group.rg_eps_booking.name
   location                     = azurerm_resource_group.rg_eps_booking.location
   administrator_login          = var.admin_username

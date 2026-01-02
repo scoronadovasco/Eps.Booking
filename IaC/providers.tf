@@ -6,8 +6,8 @@ terraform {
     }
   }
   backend "azurerm" {
-    storage_account_name = "epsbookingiac"
-    container_name = "epsbookingiac"
+    storage_account_name = "epsbookingiac1205"
+    container_name = "epsbookingiac1205"
     resource_group_name = "rg_terraform_backend"
     key = "terraform.tfstate"
   }

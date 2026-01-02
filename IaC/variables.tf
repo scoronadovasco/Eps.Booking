@@ -1,6 +1,6 @@
 variable "az_subscription_id" {
   type = string
-  default = "ef0daded-79da-4cd0-ba63-e41e85e065d6"
+  default = "34820a7f-49a4-448c-adab-ee7b09d9403b"
 }
 
 variable "admin_username" {
