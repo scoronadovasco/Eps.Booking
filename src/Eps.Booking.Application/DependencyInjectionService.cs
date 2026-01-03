@@ -1,8 +1,8 @@
 using AutoMapper;
+using Eps.Booking.Application.DataBase.User.Commands;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Eps.Booking.Application;
-
 
 public static class DependencyInjectionService
 {
@@ -14,6 +14,7 @@ public static class DependencyInjectionService
         });
 
         services.AddSingleton(mapper.CreateMapper());
+        services.AddTransient<ICreateUserCommand, CreateUserCommand>();
         return services;
     }
 }
