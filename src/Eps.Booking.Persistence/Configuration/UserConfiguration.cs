@@ -17,6 +17,6 @@ public class UserConfiguration
         WithOne(x => x.User).HasForeignKey<DoctorEntity>(x => x.UserId);
 
         entityBuilder.HasOne(x => x.Patient).
-        WithOne(x => x.User).HasForeignKey<DoctorEntity>(x => x.UserId);
+        WithOne(x => x.User).HasForeignKey<PatientEntity>(x => x.UserId);
     }
 }

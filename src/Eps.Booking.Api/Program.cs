@@ -5,7 +5,11 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 DotNetEnv.Env.Load();
-builder.Services.AddDbContext<DataBaseService>(options => options.UseSqlServer(builder.Configuration["ConnectionStrings"]));
+
+
+var connectionString = Environment.GetEnvironmentVariable("DB_CONNECTION_STRING");
+
+builder.Services.AddDbContext<DataBaseService>(options => options.UseSqlServer(builder.Configuration["SqlConnectionStrings"]));
 
 builder.Services.AddScoped<IDataBaseService, DataBaseService>();
 
