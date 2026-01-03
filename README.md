@@ -16,7 +16,7 @@ El proyecto está organizado en los siguientes módulos principales:
 ## Arquitectura
 El proyecto sigue los principios de **Clean Architecture**, que promueve la separación de responsabilidades y la independencia de los módulos. A continuación, se muestra un diagrama representativo:
 
-![Clean Architecture](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*ZdlHz8B0_5zD1pNe1ZAc_w.png)
+![Clean Architecture](clean-architecture.png)
 
 ### Principios Clave de Clean Architecture:
 - **Independencia de Frameworks**: El sistema no depende de frameworks externos.
