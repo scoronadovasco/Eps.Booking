@@ -1,7 +1,7 @@
 using Eps.Booking.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Eps.Booking.Application.Interfaces;
+namespace Eps.Booking.Application.DataBase;
 
 public interface IDataBaseService
 {

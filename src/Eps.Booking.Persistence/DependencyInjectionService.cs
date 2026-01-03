@@ -1,4 +1,4 @@
-using Eps.Booking.Application.Interfaces;
+using Eps.Booking.Application.DataBase;
 using Eps.Booking.Persistence.DataBase;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
