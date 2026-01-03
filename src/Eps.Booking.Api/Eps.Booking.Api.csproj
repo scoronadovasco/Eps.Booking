@@ -18,6 +18,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Eps.Booking.Persistence\Eps.Booking.Persistence.csproj" />
+    <ProjectReference Include="..\Eps.Booking.Application\Eps.Booking.Application.csproj" />
+    <ProjectReference Include="..\Eps.Booking.Common\Eps.Booking.Common.csproj" />
+    <ProjectReference Include="..\Eps.Booking.External\Eps.Booking.External.csproj" />
   </ItemGroup>
 
 </Project>
