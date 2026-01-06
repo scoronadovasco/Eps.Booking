@@ -9,5 +9,6 @@ public class MapperProfile : Profile
     public MapperProfile()
     {
         CreateMap<UserEntity,CreateUserModel>().ReverseMap();
+        CreateMap<UserEntity,UpdateUserModel>().ReverseMap();
     }
 }

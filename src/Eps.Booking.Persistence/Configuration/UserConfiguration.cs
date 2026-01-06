@@ -12,6 +12,7 @@ public class UserConfiguration
         entityBuilder.Property(x => x.UserName).IsRequired();
         entityBuilder.Property(x => x.Password).IsRequired();
         entityBuilder.Property(x => x.Role).IsRequired();
+        entityBuilder.HasIndex(x => x.UserName).IsUnique();
 
         entityBuilder.HasOne(x => x.Doctor).
         WithOne(x => x.User).HasForeignKey<DoctorEntity>(x => x.UserId);

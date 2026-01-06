@@ -1,4 +1,5 @@
 using AutoMapper;
+using Eps.Booking.Application.DataBase.User;
 using Eps.Booking.Application.DataBase.User.Commands;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -15,6 +16,9 @@ public static class DependencyInjectionService
 
         services.AddSingleton(mapper.CreateMapper());
         services.AddTransient<ICreateUserCommand, CreateUserCommand>();
+        services.AddTransient<IUpdateUserCommand, UpdateUserCommand>();
+        services.AddTransient<IDeleteUserCommand, DeleteUserCommand>();
+        services.AddTransient<IUpdateUserPasswordCommand, UpdateUserPasswordCommand>();
         return services;
     }
 }

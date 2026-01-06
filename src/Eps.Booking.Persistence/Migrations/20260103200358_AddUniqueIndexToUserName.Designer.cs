@@ -4,6 +4,7 @@ using Eps.Booking.Persistence.DataBase;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Eps.Booking.Persistence.Migrations
 {
     [DbContext(typeof(DataBaseService))]
-    partial class DataBaseServiceModelSnapshot : ModelSnapshot
+    [Migration("20260103200358_AddUniqueIndexToUserName")]
+    partial class AddUniqueIndexToUserName
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
