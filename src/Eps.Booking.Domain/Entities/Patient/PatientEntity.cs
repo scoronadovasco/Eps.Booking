@@ -4,6 +4,7 @@ public class PatientEntity
 {
     public Guid Id { get; set; }
 
+    public required string FullName { get; set; }
     public Guid UserId { get; set; }
     public UserEntity? User { get; set; }
     public required string DocumentNumber { get; set; }
