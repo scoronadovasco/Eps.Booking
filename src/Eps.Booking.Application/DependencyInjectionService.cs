@@ -1,4 +1,5 @@
 using AutoMapper;
+using Eps.Booking.Application.DataBase.Speciality.Commands;
 using Eps.Booking.Application.DataBase.User;
 using Eps.Booking.Application.DataBase.User.Commands;
 using Eps.Booking.Application.DataBase.User.Querys;
@@ -22,6 +23,9 @@ public static class DependencyInjectionService
         services.AddTransient<IUpdateUserPasswordCommand, UpdateUserPasswordCommand>();
         services.AddTransient<IGetAllUsersQuery, GetAllUsersQuery>();
         services.AddTransient<IGetUserByIdQuery, GetUserByIdQuery>();
+        services.AddTransient<ICreateSpecialityCommand, CreateSpecialityCommand>();
+        services.AddTransient<IUpdateSpecialityCommand, UpdateSpecialityCommand>();
+
         return services;
     }
 }
