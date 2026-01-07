@@ -27,7 +27,8 @@ public static class DependencyInjectionService
         services.AddTransient<ICreateSpecialityCommand, CreateSpecialityCommand>();
         services.AddTransient<IUpdateSpecialityCommand, UpdateSpecialityCommand>();
         services.AddTransient<ICreateDoctorCommand, CreateDoctorCommand>();
-
+        services.AddTransient<IUpdateDoctorCommand, UpdateDoctorCommand>();
+        services.AddTransient<IDeleteDoctorCommand, DeleteDoctorCommand>();
 
         return services;
     }
