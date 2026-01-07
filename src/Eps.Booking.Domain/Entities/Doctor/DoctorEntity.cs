@@ -12,6 +12,7 @@ public class DoctorEntity
     public Guid? SpecialityId { get; set; }
 
     public SpecialityEntity? Speciality { get; set; }
+    public DateTime CreateAt {get; set;}
 
     public ICollection<AvailabilityEntity> Availabilities { get; set; } = new List<AvailabilityEntity>();
     public ICollection<AppointmentEntity> Appointments { get; set; } = new List<AppointmentEntity>();
