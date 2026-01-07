@@ -10,6 +10,8 @@ public class PatientEntity
     public required string DocumentNumber { get; set; }
     public DateTime BirthDate { get; set; }
 
+    public DateTime CreateAt { get; set; }
+
     public ICollection<AppointmentEntity> Appointments { get; set; }
        = new List<AppointmentEntity>();
 
