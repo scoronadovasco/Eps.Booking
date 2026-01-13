@@ -1,6 +1,8 @@
 using AutoMapper;
 using Eps.Booking.Application.DataBase.Doctor.Commands;
 using Eps.Booking.Application.DataBase.Doctor.Querys;
+using Eps.Booking.Application.DataBase.Patient.Commands;
+using Eps.Booking.Application.DataBase.Patient.Queries;
 using Eps.Booking.Application.DataBase.Speciality.Commands;
 using Eps.Booking.Application.DataBase.User.Commands;
 using Eps.Booking.Application.DataBase.User.Querys;
@@ -22,5 +24,9 @@ public class MapperProfile : Profile
         CreateMap<DoctorEntity, UpdateDoctorModel>().ReverseMap();
         CreateMap<DoctorEntity, GetAllDoctorsModel>().ReverseMap();
         CreateMap<DoctorEntity, GetDoctorByIdModel>().ReverseMap();
+        CreateMap<PatientEntity, CreatePatientModel>().ReverseMap();
+        CreateMap<PatientEntity, UpdatePatientModel>().ReverseMap();
+        CreateMap<PatientEntity, GetAllPatientModel>().ReverseMap();
+
     }
 }

@@ -1,8 +1,9 @@
 using AutoMapper;
 using Eps.Booking.Application.DataBase.Doctor.Commands;
 using Eps.Booking.Application.DataBase.Doctor.Querys;
+using Eps.Booking.Application.DataBase.Patient.Commands;
+using Eps.Booking.Application.DataBase.Patient.Queries;
 using Eps.Booking.Application.DataBase.Speciality.Commands;
-using Eps.Booking.Application.DataBase.User;
 using Eps.Booking.Application.DataBase.User.Commands;
 using Eps.Booking.Application.DataBase.User.Querys;
 using Microsoft.Extensions.DependencyInjection;
@@ -32,6 +33,9 @@ public static class DependencyInjectionService
         services.AddTransient<IDeleteDoctorCommand, DeleteDoctorCommand>();
         services.AddTransient<IGetAllDoctorsQuery, GetAllDoctorsQuery>();
         services.AddTransient<IGetDoctorByIdQuery, GetDoctorByIdQuery>();
+        services.AddTransient<ICreatePatientCommand, CreatePatientCommand>();
+        services.AddTransient<IUpdatePatientCommand, UpdatePatientCommand>();
+        services.AddTransient<IGetAllPatientQuery, GetAllPatientQuery>();
 
         return services;
     }

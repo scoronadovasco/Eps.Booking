@@ -1,8 +1,6 @@
 using AutoMapper;
-using Eps.Booking.Application.DataBase.User.Commands;
 using Eps.Booking.Domain.Entities;
-
-namespace Eps.Booking.Application.DataBase.User;
+namespace Eps.Booking.Application.DataBase.User.Commands;
 
 public class UpdateUserCommand: IUpdateUserCommand
 {
