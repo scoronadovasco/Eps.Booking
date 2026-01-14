@@ -2,8 +2,7 @@ name: build and deploy web api to azure
 
 on:
     push:
-        paths:
-            - 'IaC/**'
+        
         branches:
             - main
         

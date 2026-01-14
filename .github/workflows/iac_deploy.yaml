@@ -2,6 +2,8 @@ name: "iac continuos integration"
 
 on:
     push:
+        paths:
+            - 'IaC/**'
         branches:
             - main
 jobs:
