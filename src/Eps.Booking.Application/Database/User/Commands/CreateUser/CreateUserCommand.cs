@@ -15,6 +15,7 @@ public class CreateUserCommand: ICreateUserCommand
 
     public async Task<CreateUserModel> Execute(CreateUserModel model)
     {
+        model.CreateAt = DateTime.UtcNow; 
         var entity = _mapper.Map<UserEntity>(model);
         await _dataBaseService.Users.AddAsync(entity);
 
