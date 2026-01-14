@@ -13,9 +13,7 @@ public class UpdateUserModel
     public required string Password { get; set; }
 
     public Role Role { get; set; }
-
     public bool IsActive { get; set; }
 
-    public DateTime CreateAt { get; set; }
 
 }
