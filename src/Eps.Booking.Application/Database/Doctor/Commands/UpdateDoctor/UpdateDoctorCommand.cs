@@ -14,7 +14,7 @@ public class UpdateDoctorCommand: IUpdateDoctorCommand
         _mapper = mapper;
     }
 
-    public async Task<UpdateDoctorCommand> Execute(UpdateDoctorCommand model)
+    public async Task<UpdateDoctorModel> Execute(UpdateDoctorModel model)
     {
         var entity = _mapper.Map<DoctorEntity>(model);
 
