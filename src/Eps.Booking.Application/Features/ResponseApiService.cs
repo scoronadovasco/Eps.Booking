@@ -4,7 +4,7 @@ namespace Eps.Booking.Application.Features;
 
 public static class ResponseApiService
 {
-    public static BaseResponseModel Response(int statuscode, object data = null, string message = null)
+    public static BaseResponseModel Response(int statuscode, object? data = null, string message = null)
     {
         bool success = false;
 
